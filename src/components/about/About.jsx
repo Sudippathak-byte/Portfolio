@@ -23,7 +23,7 @@ const About = () => {
             </p>
             <div className="">
               <a
-                href="../../assets/Fake Resume.pdf"
+                href="../../assets/Sudip_Resume.pdf"
                 className="primary-btn my-6 mr-6 inline-block"
                 download
               >
