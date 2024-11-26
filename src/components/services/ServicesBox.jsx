@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Layers, Paintbrush, Code2, Wrench } from "lucide-react";
 
 const Services = [
