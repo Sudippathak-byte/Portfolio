@@ -1,56 +1,63 @@
 import React from "react";
-import { AiFillLayout } from "react-icons/ai";
-import { MdOutlinePhoneAndroid } from "react-icons/md";
-import { HiMiniComputerDesktop } from "react-icons/hi2";
-import { MdSecurity } from "react-icons/md";
+import { Layers, Paintbrush, Code2, Wrench } from "lucide-react";
 
 const Services = [
   {
-    name: "UX research",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium beatae quidem.",
+    name: "Frontend Development",
+    description: 
+      "Crafting responsive user interfaces using React and modern JavaScript. Specializing in component-based architecture and interactive web elements.",
     image: "https://picsum.photos/200/300",
-    icon: <AiFillLayout className="text-4xl" />,
-    bgColor: "bg-blue-500/70",
+    icon: <Layers className="text-4xl" />,
+    bgcolor: "bg-blue-500/70",
   },
   {
-    name: "App Development",
+    name: "Web Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium beatae quidem.",
+      "Creating beautiful and responsive layouts using Tailwind CSS. Focused on modern design principles, clean aesthetics, and mobile-first approach.",
     image: "https://picsum.photos/200/301",
-    icon: <MdOutlinePhoneAndroid className="text-4xl" />,
-    bgColor: "bg-lime-500/70",
+    icon: <Paintbrush className="text-4xl" />,
+    bgcolor: "bg-lime-500/70",
   },
   {
-    name: "Web App Development",
+    name: "Javascript Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium beatae quidem.",
+      "Building dynamic web applications with modern JavaScript. Experience with ES6+ features, DOM manipulation, and API integration.",
     image: "https://picsum.photos/200/302",
-    icon: <HiMiniComputerDesktop className="text-4xl" />,
-    bgColor: "bg-fuchsia-500/70",
+    icon: <Code2 className="text-4xl" />,
+    bgcolor: "bg-fuchsia-500/70",
   },
   {
-    name: "Security",
+    name: "Tools & Technologies",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium beatae quidem.",
+      "Proficient with essential development tools including Git, NPM, and modern build tools like Vite. Experienced in using VS Code and Chrome DevTools.",
     image: "https://picsum.photos/200/303",
-    icon: <MdSecurity className="text-4xl" />,
-    bgColor: "bg-orange-500/70",
+    icon: <Wrench className="text-4xl" />,
+    bgcolor: "bg-orange-500/70",
   },
 ];
+
 const ServicesBox = () => {
   return (
     <section id="services" className="my-10 container">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {Services.map(({ name, description, image, icon, bgColor }) => (
+        {Services.map(({ name, description, image, icon, bgcolor }) => (
           <div
             key={name}
-            className={` ${bgColor} rounded-xl  bg-blue-500/70 text-white  bg-[url('${image}')] bg-cover bg-no-repeat bg-center bg-blend-overlay`}
+            className={`${bgcolor} rounded-xl text-white relative overflow-hidden`}
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundBlendMode: 'overlay',
+            }}
           >
-            <div className="p-3 md:p-16 backdrop-blur-sm space-y-3 rounded-xl">
-              {icon}
+            <div className="p-3 md:p-16 backdrop-blur-sm space-y-3 rounded-xl hover:backdrop-blur-md transition-all duration-300">
+              <div className="text-white">
+                {icon}
+              </div>
               <h1 className="text-2xl font-bold">{name}</h1>
-              <p>{description}</p>
+              <p className="text-gray-100">{description}</p>
             </div>
           </div>
         ))}

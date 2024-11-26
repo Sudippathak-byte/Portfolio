@@ -9,8 +9,7 @@ const Services = () => {
           Services
         </h1>
         <p className="text-slate-500 text-center md:w-[50%] mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-          dolor sit amet. Id,erroradipisicing elit. Id, error.
+          Resolving design problems, buildings smart user interfaces, and useful interactions, devloping rich web applications and seamless web experinces.
         </p>
       </div>
       <div>
